@@ -27,6 +27,7 @@
           max_index = i;
         }
       }
+
       if(max_index === length - 1 && str[0] != str[max_index]) {
         console.log("Unique!!")
       }

@@ -13,17 +13,10 @@
     }
 
     Problem.prototype.isRotation = function(str1, str2) {
-      var str1_len = str1.length,
-          flag = false;
-      for(var i = 0; i < str1_len; i++) {
-        if(str2.indexOf(str1.substring(i, str1_len)) >= 0 && str2.indexOf(str1.substring(0, i)) >= 0) {
-          console.log("Yes..");
-          flag = true;
-          break;
-        }
-      }
-      if(flag == false) {
-        console.log("not..");
+      var length = str1.length;
+      if(length == str2.length && length > 0) {
+        var str11 = str1 + str1;
+        return str11.indexOf(str2);
       }
     };
 
@@ -31,6 +24,6 @@
   })();
 
   var prb = new Problem();
-  prb.isRotation('abcd', 'cdab');
+  console.log(prb.isRotation('abcd', 'cdab'));
 
 })();
